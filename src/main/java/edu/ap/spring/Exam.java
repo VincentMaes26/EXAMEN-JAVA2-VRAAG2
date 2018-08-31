@@ -58,4 +58,6 @@ public class Exam {
 			  .max(Comparator.comparing(i -> i.getY()))
 			  .ifPresent(max -> highest = (int) max.getY());
 	}	
+	
+	return highest;
 }
