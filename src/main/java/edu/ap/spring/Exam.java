@@ -39,11 +39,21 @@ public class Exam {
 	// dat string s voorkomt (zowel uppercase als lowercase) in de lijst names
 	// 1 punt
 	public int countChar(List<String> names, String s) {
+		int count = 0;
+		names.stream().forEach(n -> {
+			if(n.contains(s)) {
+				count++;
+			}
+			
+		});
+		return count;
 	}
 	
 	// Maak gebruik van lambdas en streams om het hoogste Y coordinaat
 	// te vinden
 	// 2 punten
 	public int getMaxY(List<Point> points) {
+		int highest = 0;
+		points.stream().filter(y -> getY() > points.stream().)
 	}	
 }
