@@ -54,6 +54,8 @@ public class Exam {
 	// 2 punten
 	public int getMaxY(List<Point> points) {
 		int highest = 0;
-		points.stream().filter(y -> getY() > points.stream().)
+		points.stream()
+			  .max(Comparator.comparing(i -> i.getY()))
+			  .ifPresent(max -> highest = (int) max.getY());
 	}	
 }
