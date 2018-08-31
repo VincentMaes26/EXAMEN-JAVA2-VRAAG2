@@ -16,12 +16,23 @@ public class Exam {
 	// getallen terug te geven die deelbaar zijn door twee
 	// 2 punten
 	public int[] getTimesTwo(int[] numbers) {
+		List<Integer> nums = new ArrayList<Integer>();
+		for(int i : numbers)
+			nums.add(i);
+		int[] intArray = nums
+						 .stream()
+						 .filter(i -> i % 2 == 0)
+						 .mapToInt(i->i)
+						 .toArray();
+		return intArray;
 	}
 	
 	// Maak gebruik van lambdas en streams om alle uppercase characters
 	// te tellen in de gegeven string
 	// 1 punt
 	public int countUppercaseCharacters(String sentence) {
+		int count = (int) sentence.chars().filter(Character::isUpperCase).count();
+		return count;
 	}
 	
 	// Maak gebruik van lambdas en streams om het aantal keren te tellen
